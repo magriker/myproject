@@ -9,7 +9,6 @@ class TopView(TemplateView):
 
 class ProductListView(ListView):
     model = Product
-    template_name = 'list.html'
     paginate_by = 3
 
 

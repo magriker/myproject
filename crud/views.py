@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, ListView
 from .models import Product
+from django.views.generic.edit import CreateView
 # Create your views here.
 
 class TopView(TemplateView):
@@ -12,3 +13,6 @@ class ProductListView(ListView):
     paginate_by = 3
 
 
+class ProductCreateView(CreateView):
+    model = Product
+    fields = '__all__'
